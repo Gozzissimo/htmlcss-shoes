@@ -8,16 +8,18 @@
 html {
     font-size: 100%;
     font-family: Arial, Helvetica, sans-serif;
-}
-
-.container {
-    position: relative;
+    scroll-behavior: smooth;
 }
 
 .nav-bar {
-    position: absolute;
+    position: fixed;
     top: 2em;
     right: 0;
+    z-index: 1;
+}
+
+.relative {
+    position: relative;
 }
 
 .buttons li {
@@ -34,11 +36,37 @@ html {
     border-radius: 50%;
 }
 
-#red-screen {
-    height: 100vh;
-    background-color: red;
+.buttons li a:hover {
+    box-shadow: 0 0 10px grey ;
 }
 
-.shoes-img {
+#red-screen {
+    background-color: red;
+    height: 100vh;
+}
+#green-screen {
+    background-color: green;
+    height: 100vh;
+}
+#yellow-screen {
+    background-color: yellow;
+    height: 100vh;
+}
 
+.img {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.title {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: pink;
+    text-transform: uppercase;
+    text-align: center;
+    font size: 4em;
 }
